@@ -16,14 +16,15 @@ public class MainView extends View{
 		super(C);
 		BM = new Benchmark();
 		WT = new WinTool(C);
-		S = new Square()
-	}
-	public void Update(long mi) {
-		
-	}
-	public void Draw(Canvas C) {
 		Paint P = new Paint();
 		P.setARGB(255, 0, 0, 255);
+		S = new Square(10, 10, 100, 100, P);
+	}
+	public void Update(long mi) {
+		S.Update(mi);
+	}
+	public void Draw(Canvas C) {
+		S.Draw(C);
 	}
 	protected void onDraw(Canvas C) {
 		super.onDraw(C);
