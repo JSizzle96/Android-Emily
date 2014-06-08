@@ -11,10 +11,12 @@ import com.kc.tools.WinTool;
 public class MainView extends View{
 	Benchmark BM;
 	WinTool WT;
+	Square S; 
 	public MainView(Context C) {
 		super(C);
 		BM = new Benchmark();
 		WT = new WinTool(C);
+		S = new Square()
 	}
 	public void Update(long mi) {
 		
@@ -22,7 +24,6 @@ public class MainView extends View{
 	public void Draw(Canvas C) {
 		Paint P = new Paint();
 		P.setARGB(255, 0, 0, 255);
-		C.drawRect(0, 0, WT.getScreenWidth(), WT.getScreenHeight(), P);
 	}
 	protected void onDraw(Canvas C) {
 		super.onDraw(C);
